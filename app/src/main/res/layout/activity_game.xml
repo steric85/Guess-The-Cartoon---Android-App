@@ -11,9 +11,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/game_background"/>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:text="Level 1"
         android:textAllCaps="true"
         android:textSize="25sp"
@@ -24,57 +31,80 @@
         android:textColor="#ffffff"
         android:id="@+id/level_number" />
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:text="0"
-        android:textColor="#3E2723"
-        android:layout_below="@+id/level_number"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="5dp"
-        android:id="@+id/score"/>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/trophy"
-        android:layout_toLeftOf="@+id/score"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/level_number"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="25dp"
+                android:src="@drawable/trophy"
+                android:layout_marginTop="5dp"/>
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_below="@+id/score"
-        android:layout_marginTop="16dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/cartoon"
-        android:src="@drawable/mickey"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="35dp"
+                android:text="0"
+                android:textColor="#3E2723"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/score"/>
 
+        </LinearLayout>
 
-    <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="fitCenter"
-        android:layout_margin="10dp"
-        android:background="@android:color/transparent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/prev_level"
-        android:onClick="decreLevel"/>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:id="@+id/cartoon"
+            android:src="@drawable/mickey"/>
 
-    <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="10dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/next_level"
-        android:onClick="increLevel"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textAlignment="center"
+            android:text="Name of the cartoon"
+            android:layout_below="@+id/cartoon"
+            />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
 
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/prev_level"
+                android:onClick="decreLevel"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next_level"
+                android:onClick="increLevel"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>
+
