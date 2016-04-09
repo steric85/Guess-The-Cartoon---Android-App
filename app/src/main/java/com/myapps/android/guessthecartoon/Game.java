@@ -1,6 +1,7 @@
 package com.myapps.android.guessthecartoon;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
+import java.util.concurrent.TimeUnit;
 
 public class Game extends AppCompatActivity {
 
@@ -57,13 +59,15 @@ public class Game extends AppCompatActivity {
         }
     }
 
-    public void checkAnswer(View view)
-    {
+    public void checkAnswer(View view) throws InterruptedException {
         EditText nameEditText = (EditText) findViewById(R.id.input);
 
         if(nameEditText.getText().toString().replace(" ","").equalsIgnoreCase(cartoonNames[levelNo-1]))
         {
             updateScore();
+            displayCorrect();
+            TimeUnit.SECONDS.sleep(10);
+            clearDisplay();
             increLevel();
             nameEditText.setText("");
         }
@@ -71,6 +75,9 @@ public class Game extends AppCompatActivity {
         {
             if(!nameEditText.getText().toString().isEmpty())
             {
+                displayWrong();
+                TimeUnit.SECONDS.sleep(10);
+                clearDisplay();
                 nameEditText.setText("");
             }
             else
@@ -88,8 +95,8 @@ public class Game extends AppCompatActivity {
 
     private void changeCartoon()
     {
-        ImageView cartoonImageView =(ImageView) findViewById(R.id.cartoon);
-        cartoonImageView.setImageResource(cartoonImages[levelNo-1]);
+        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
+        cartoonTextView.setBackgroundResource(cartoonImages[levelNo-1]);
     }
 
     private void updateScore()
@@ -97,5 +104,25 @@ public class Game extends AppCompatActivity {
         TextView scoreTextView =(TextView) findViewById(R.id.score);
         score +=250;
         scoreTextView.setText(String.valueOf(score));
+    }
+
+    private void displayCorrect()
+    {
+        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
+        cartoonTextView.setText("Correct!");
+        cartoonTextView.setTextColor(Color.parseColor("#76FF03"));
+    }
+
+    private void displayWrong()
+    {
+        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
+        cartoonTextView.setText("Wrong!");
+        cartoonTextView.setTextColor(Color.parseColor("#d50000"));
+    }
+
+    private void clearDisplay()
+    {
+        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
+        cartoonTextView.setText("");
     }
 }
