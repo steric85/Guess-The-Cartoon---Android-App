@@ -12,12 +12,12 @@ public class ScoreScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_screen);
-        displayScore(Game.score);
+        displayScore();
     }
 
     public void playGame(View view)
     {
-        Intent k = new Intent("com.myapps.android.guessthecartoon.Game");
+        Intent k = new Intent(ScoreScreen.this,Game.class);
         startActivity(k);
     }
 
@@ -27,10 +27,11 @@ public class ScoreScreen extends AppCompatActivity {
         startActivity(k);
     }
 
-    private void displayScore(int number)
+    private void displayScore()
     {
         TextView score = (TextView) findViewById(R.id.score_text_view);
-        score.setText("Score: "+number);
+        score.setText("Score: "+Game.score);
+        Game.score=0;
     }
 
 }

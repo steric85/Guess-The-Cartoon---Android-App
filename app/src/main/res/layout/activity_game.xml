@@ -48,8 +48,9 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_below="@+id/score"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="16dp"
         android:layout_centerInParent="true"
+        android:id="@+id/cartoon"
         android:src="@drawable/mickey"/>
 
 
