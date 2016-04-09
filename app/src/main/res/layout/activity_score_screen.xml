@@ -1,70 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context="com.myapps.android.guessthecartoon.ScoreScreen">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"
-        />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="375dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/trophy_score"
-        />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="480dp"
+        android:layout_height="0dp"
+        android:layout_weight="7"
         android:text="Score: "
         android:textAllCaps="true"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:layout_marginTop="175dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="56sp"
+        android:background="@drawable/trophy_score"
         android:textColor="#000000"
         android:textStyle="bold"
         android:id="@+id/score_text_view"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:id="@+id/linearLayout">
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Replay"
+        android:background="@color/colorAccent"
+        android:textSize="32sp"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        android:onClick="playGame"
+        android:layout_marginBottom="16dp"/>
 
 
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="55dp"
-            android:text="Replay"
-            android:layout_margin="16dp"
-            android:background="@color/colorAccent"
-            android:textSize="25sp"
-            android:textColor="#ffffff"
-            android:textAllCaps="true"
-            android:onClick="playGame"/>
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Main Menu"
+        android:layout_gravity="center"
+        android:textSize="32sp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:onClick="displayMainMenu"
+        android:layout_marginBottom="16dp"/>
 
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="55dp"
-            android:text="Main Menu"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="32dp"
-            android:textSize="25sp"
-            android:background="@color/colorAccent"
-            android:textColor="#ffffff"
-            android:textAllCaps="true"
-            android:onClick="displayMainMenu"/>
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</LinearLayout>

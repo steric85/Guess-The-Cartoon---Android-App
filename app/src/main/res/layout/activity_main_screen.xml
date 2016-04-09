@@ -1,58 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.myapps.android.guessthecartoon.MainScreen">
 
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Play"
+        android:background="@color/colorAccent"
+        android:textSize="32sp"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:onClick="playGame"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="50dp" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"
-        />
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Exit"
+        android:textSize="32sp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:layout_marginBottom="150dp"
+        android:onClick="terminateApp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
-
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="55dp"
-            android:text="Play"
-            android:layout_margin="20dp"
-            android:background="@color/colorAccent"
-            android:textSize="25sp"
-            android:textColor="#ffffff"
-            android:textAllCaps="true"
-            android:onClick="playGame"/>
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="55dp"
-            android:text="Highscore"
-            android:layout_margin="20dp"
-            android:textSize="25sp"
-            android:background="@color/colorAccent"
-            android:textColor="#ffffff"
-            android:textAllCaps="true"/>
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="55dp"
-            android:text="Exit"
-            android:layout_margin="20dp"
-            android:textSize="25sp"
-            android:background="@color/colorAccent"
-            android:textColor="#ffffff"
-            android:textAllCaps="true"
-            android:onClick="terminateApp"/>
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</LinearLayout>
