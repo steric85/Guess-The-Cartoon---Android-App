@@ -1,15 +1,20 @@
 package com.myapps.android.guessthecartoon;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import java.lang.CharSequence;
 import java.text.NumberFormat;
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +22,7 @@ public class Game extends AppCompatActivity {
 
     int score = 0;
     int levelNo=1;
+    String temp = "Wrong Answer!";
     String[] cartoonNames={"MickeyMouse","Dexter","PinkPanther","FredFlinstone","KimPossible" };
     int cartoonImages[]={R.drawable.mickey,R.drawable.dexter,R.drawable.pink_panther,R.drawable.fred_flintstone,R.drawable.kim_possible};
 
@@ -25,6 +31,7 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
     }
+
 
     private void increLevel() {
 
@@ -59,25 +66,21 @@ public class Game extends AppCompatActivity {
         }
     }
 
-    public void checkAnswer(View view) throws InterruptedException {
+    public void checkAnswer(View view) {
         EditText nameEditText = (EditText) findViewById(R.id.input);
 
         if(nameEditText.getText().toString().replace(" ","").equalsIgnoreCase(cartoonNames[levelNo-1]))
         {
             updateScore();
-            displayCorrect();
-            TimeUnit.SECONDS.sleep(10);
-            clearDisplay();
             increLevel();
-            nameEditText.setText("");
+            if(levelNo<=5)
+                nameEditText.setText("");
         }
         else
         {
             if(!nameEditText.getText().toString().isEmpty())
             {
-                displayWrong();
-                TimeUnit.SECONDS.sleep(10);
-                clearDisplay();
+                Toast.makeText(this,""+temp,Toast.LENGTH_SHORT).show();
                 nameEditText.setText("");
             }
             else
@@ -95,8 +98,8 @@ public class Game extends AppCompatActivity {
 
     private void changeCartoon()
     {
-        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
-        cartoonTextView.setBackgroundResource(cartoonImages[levelNo-1]);
+        ImageView cartoonTextView =(ImageView) findViewById(R.id.cartoon);
+        cartoonTextView.setImageResource(cartoonImages[levelNo-1]);
     }
 
     private void updateScore()
@@ -106,23 +109,4 @@ public class Game extends AppCompatActivity {
         scoreTextView.setText(String.valueOf(score));
     }
 
-    private void displayCorrect()
-    {
-        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
-        cartoonTextView.setText("Correct!");
-        cartoonTextView.setTextColor(Color.parseColor("#76FF03"));
-    }
-
-    private void displayWrong()
-    {
-        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
-        cartoonTextView.setText("Wrong!");
-        cartoonTextView.setTextColor(Color.parseColor("#d50000"));
-    }
-
-    private void clearDisplay()
-    {
-        TextView cartoonTextView =(TextView) findViewById(R.id.cartoon);
-        cartoonTextView.setText("");
-    }
 }

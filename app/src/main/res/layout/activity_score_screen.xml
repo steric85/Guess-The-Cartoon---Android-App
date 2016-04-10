@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:orientation="vertical"
     tools:context="com.myapps.android.guessthecartoon.ScoreScreen">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="480dp"
@@ -49,4 +52,7 @@
         android:onClick="displayMainMenu"
         android:layout_marginBottom="16dp"/>
 
-</LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

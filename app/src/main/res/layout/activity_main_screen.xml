@@ -18,7 +18,7 @@
         android:textColor="#ffffff"
         android:textAllCaps="true"
         android:onClick="playGame"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="175dp"
         android:layout_marginBottom="50dp" />
 
     <Button
@@ -30,7 +30,7 @@
         android:background="@color/colorAccent"
         android:textColor="#ffffff"
         android:textAllCaps="true"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="175dp"
         android:onClick="terminateApp"/>
 
 </LinearLayout>
