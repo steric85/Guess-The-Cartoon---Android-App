@@ -1,56 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/background"
     tools:context="com.myapps.android.guessthecartoon.ScoreScreen">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="480dp"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:text="Score: "
-        android:textAllCaps="true"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:textSize="56sp"
-        android:background="@drawable/trophy_score"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:id="@+id/score_text_view"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:gravity="center">
 
-    <Button
-        android:layout_width="225dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Replay"
-        android:background="@color/colorAccent"
-        android:textSize="32sp"
-        android:textColor="#ffffff"
-        android:textAllCaps="true"
-        android:layout_gravity="center"
-        android:onClick="playGame"
-        android:layout_marginBottom="16dp"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/high_score"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginRight="10dp"
+                android:textColor="#000000"
+                android:background="@drawable/highscore_bg"
+                android:textSize="30sp"
+                android:textStyle="italic"
+                android:id="@+id/highscore_text_view"/>
+
+        </LinearLayout>
 
 
-    <Button
-        android:layout_width="225dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Main Menu"
-        android:layout_gravity="center"
-        android:textSize="32sp"
-        android:background="@color/colorAccent"
-        android:textColor="#ffffff"
-        android:textAllCaps="true"
-        android:onClick="displayMainMenu"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:layout_width="520dp"
+            android:layout_height="420dp"
+            android:text="Score: "
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="56sp"
+            android:background="@drawable/trophy_score"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:id="@+id/score_text_view"
+            android:layout_marginBottom="28dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:text="Replay"
+            android:background="@color/colorAccent"
+            android:textSize="32sp"
+            android:textColor="#ffffff"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:onClick="playGame"
+            android:layout_marginBottom="18dp"/>
+
+
+        <Button
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:text="Main Menu"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textAllCaps="true"
+            android:onClick="displayMainMenu"
+            android:layout_marginBottom="18dp"/>
 
 
     </LinearLayout>
