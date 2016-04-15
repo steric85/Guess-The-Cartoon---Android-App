@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.myapps.android.guessthecartoon.MainScreen">
+
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Play"
+        android:background="@color/colorAccent"
+        android:textSize="32sp"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:onClick="playGame"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Exit"
+        android:textSize="32sp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:layout_marginBottom="175dp"
+        android:onClick="terminateApp"/>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/game_background"
+    tools:context="com.myapps.android.guessthecartoon.Game">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.75"
+        android:text="Level 1"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textSize="35sp"
+        android:background="#3E2723"
+        android:textColor="#ffffff"
+        android:id="@+id/level_number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:src="@drawable/trophy" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="0"
+            android:textColor="#3E2723"
+            android:textSize="24sp"
+            android:id="@+id/score"
+            android:gravity="center|left" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="275dp"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_gravity="center"
+        android:id="@+id/cartoon"
+        android:src="@drawable/mickey"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/input"
+        android:gravity="center"
+        android:hint="Name of the cartoon"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_margin="10dp">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/prev_level"
+            android:onClick="decreLevel"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/next_level"
+            android:onClick="checkAnswer"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

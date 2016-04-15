@@ -22,6 +22,6 @@ public class MainScreen extends AppCompatActivity {
 
     public void terminateApp(View view)
     {
-        finishAffinity();
+        finish();
     }
 }

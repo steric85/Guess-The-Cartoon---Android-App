@@ -55,8 +55,6 @@ public class Game extends AppCompatActivity {
         levelNo--;
         if(levelNo<1)
         {
-            Intent i = new Intent(Game.this,MainScreen.class);
-            startActivity(i);
             finish();
         }
         else

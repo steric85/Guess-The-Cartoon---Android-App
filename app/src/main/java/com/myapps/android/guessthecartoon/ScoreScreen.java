@@ -32,9 +32,7 @@ public class ScoreScreen extends AppCompatActivity {
 
     public void displayMainMenu(View view)
     {
-        Intent k = new Intent(ScoreScreen.this,MainScreen.class);
-        startActivity(k);
-        finish();
+       finish();
     }
 
     private void displayScore(int temp_score)
