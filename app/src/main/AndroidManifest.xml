@@ -8,21 +8,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainScreen">
+        <activity android:name=".MainScreen"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".Game">
+        <activity android:name=".Game"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.myapps.android.guessthecartoon.Game" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScoreScreen">
+        <activity android:name=".ScoreScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.myapps.android.guessthecartoon.ScoreScreen" />
 

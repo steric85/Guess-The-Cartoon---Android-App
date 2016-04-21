@@ -61,7 +61,7 @@
         android:layout_marginRight="25dp"
         android:id="@+id/input"
         android:gravity="center"
-        android:hint="Name of the cartoon"
+        android:hint="@string/cartoon_name"
         android:textSize="24sp"/>
 
     <LinearLayout

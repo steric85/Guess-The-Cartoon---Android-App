@@ -4,20 +4,20 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="3727702172640" >
+    timestamp="1704141074125" >
 
     <task
         name="javac"
-        duration="169" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="87" />
+        duration="0" />
     <task
         name="verifier"
-        duration="5" />
+        duration="0" />
 
     <artifact
         location="/home/ubuntu/AndroidStudioProjects/GuessTheCartoon/app/build/outputs/apk/app-debug.apk"
