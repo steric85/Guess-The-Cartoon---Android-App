@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="520dp"
             android:layout_height="420dp"
-            android:text="Score: "
+            android:text="@string/Score"
             android:textAllCaps="true"
             android:gravity="center"
             android:layout_gravity="center"
@@ -56,7 +56,7 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="56dp"
-            android:text="Replay"
+            android:text="@string/replay"
             android:background="@color/colorAccent"
             android:textSize="32sp"
             android:textColor="#ffffff"
@@ -69,7 +69,7 @@
         <Button
             android:layout_width="210dp"
             android:layout_height="56dp"
-            android:text="Main Menu"
+            android:text="@string/main_menu"
             android:layout_gravity="center"
             android:textSize="32sp"
             android:background="@color/colorAccent"
